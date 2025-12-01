@@ -1,4 +1,4 @@
-# DPNet
+# DPNet: Doppler LiDAR Motion Planning for Highly-Dynamic Environments
 This is the project page of the paper: **DPNet: Doppler LiDAR Motion Planning for Highly-Dynamic Environments**.
 
 DPNet is among the first pioneers to integrate the novel Doppler LiDAR sensors into closed-loop motion planning.
