@@ -3,7 +3,7 @@
 <a href="https://arxiv.org/pdf/2512.00375"><img src='https://img.shields.io/badge/PDF-Arxiv-brightgreen' alt='PDF'></a>
 <a href="https://youtu.be/0-fzaFXYKvg"><img src='https://img.shields.io/badge/Video-Youtube-blue' alt='youtube'></a>
 
-This is the project page of the paper: **[DPNet: Doppler LiDAR Motion Planning for Highly-Dynamic Environments](https://arxiv.org/abs/2512.00375)**.
+This is the project page of the RA-L '26 paper: **[DPNet: Doppler LiDAR Motion Planning for Highly-Dynamic Environments](https://arxiv.org/abs/2512.00375)**.
 
 ## Introduction
 
@@ -13,9 +13,9 @@ By leveraging **Doppler LiDAR** to obtain **real-time environmental velocity inf
 
 **Watch the video introduction on YouTube:**
 
-[![Watch the video](https://img.youtube.com/vi/0-fzaFXYKvg/maxresdefault.jpg)](https://youtu.be/0-fzaFXYKvg)
+[![Watch the video](https://img.youtube.com/vi/fjQ_o6b9oSg/maxresdefault.jpg)](https://youtu.be/fjQ_o6b9oSg)
 
 
-Full code will be released upon paper acceptance.
+Full code will be released soon.
 In the meantime, we provide [ros-bridge-DopplerLiDAR](https://github.com/UUwei-zuo/ros-bridge-DopplerLiDAR), a ROS bridge that links CARLA Doppler LiDAR support to ROS.
 
