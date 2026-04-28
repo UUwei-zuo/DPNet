@@ -1,0 +1,3 @@
+[submodule "src/ros-bridge-DopplerLiDAR"]
+	path = src/ros-bridge-DopplerLiDAR
+	url = https://github.com/UUwei-zuo/ros-bridge-DopplerLiDAR.git

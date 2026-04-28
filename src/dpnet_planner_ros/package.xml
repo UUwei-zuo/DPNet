@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>dpnet_planner_ros</name>
+  <version>0.1.0</version>
+  <description>DPNet planner package for ROS.</description>
+  <maintainer email="zuowei@eee.hku.hk">zuo</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>roscpp</depend>
+  <depend>rospy</depend>
+  <depend>std_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>rosgraph_msgs</depend>
+  <depend>carla_msgs</depend>
+  <depend>derived_object_msgs</depend>
+
+  <export/>
+</package>

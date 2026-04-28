@@ -1,0 +1,89 @@
+{
+    "objects": [
+        {
+            "type": "vehicle.tesla.model3",
+            "id": "agent_1",
+            "color": "255,0,0",
+            "spawn_point": {
+                "x": -300,
+                "y": -260,
+                "z": 0.5,
+                "roll": 0.0,
+                "pitch": 0.0,
+                "yaw": 90
+            },
+            "sensors": [
+                {
+                    "type": "sensor.pseudo.tf",
+                    "id": "tf"
+                },
+                {
+                    "type": "sensor.pseudo.objects",
+                    "id": "objects"
+                },
+                {
+                    "type": "sensor.pseudo.odom",
+                    "id": "odometry"
+                },
+                {
+                    "type": "sensor.pseudo.speedometer",
+                    "id": "speedometer"
+                },
+                {
+                    "type": "actor.pseudo.control",
+                    "id": "control"
+                },
+                {
+                    "type": "sensor.camera.rgb",
+                    "id": "rgb_view",
+                    "spawn_point": {
+                        "x": 2,
+                        "y": 0.0,
+                        "z": 2,
+                        "roll": 0.0,
+                        "pitch": 10.0,
+                        "yaw": 0.0
+                    },
+                    "image_size_x": 2560,
+                    "image_size_y": 1440,
+                    "fov": 90.0,
+                    "bloom_intensity": 0.05,
+                    "attached_objects": [
+                        {
+                            "type": "actor.pseudo.control",
+                            "id": "control"
+                        }
+                    ]
+                },
+                {
+                    "type": "sensor.other.collision",
+                    "id": "collision",
+                    "spawn_point": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                },
+                {
+                    "type": "sensor.lidar.doppler",
+                    "id": "doppler_lidar",
+                    "spawn_point": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1.8,
+                        "roll": 0.0,
+                        "pitch": 0.0,
+                        "yaw": 0.0
+                    },
+                    "channels": 32,
+                    "range": 70.0,
+                    "pattern_file": "path_to_your_pattern_file",
+                    "pattern_name": "24-12.7-Uniform",
+                    "motion_compensate": true,
+                    "raycast_mode": 0,
+                    "sensor_tick": 0.0
+                }
+            ]
+        }
+    ]
+}

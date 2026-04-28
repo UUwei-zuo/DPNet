@@ -1,0 +1,33 @@
+# For detailed parameter definition, pls see original DPNet paper: https://arxiv.org/pdf/2512.00375
+DPNet_planner:
+  receding: 10 # mpc horizon
+  sample_time: 0.08 # mpc step length
+
+  nav_weights:
+    wu: 0.5 # velocity cost
+    wut: 0.5 # terminal velocity cost
+    ws: 0.5 # state tracking cost
+    wst: 0.2 # terminal state tracking cost
+
+  d-kalmannet:
+    dt: 0.2 # predictor step length
+
+  dt_mpc:
+    d1: 0.30 # compulsory minimum distance
+    d2: 0.30 # Doppler adaptive distance
+    d0: 1.0 # Doppler-inferred collision threshold
+    alpha: 0.20
+    beta: 0.05
+    tau1_min: 0.30
+    tau2_min: 0.30
+    kappa_init: 1.00
+    delta_kappa: 1.00
+
+Carla_DynaBARN:
+  vehicles: 3 # obstacle number
+  seed: 79 # obstacle seed
+
+DPNet_runtime:
+  enable_collision_retry: true # retry a run when collision is detected
+  max_retry_times: 2 # number of retries after the first attempt
+  retry_delay_sec: 3.0 # delay between retries

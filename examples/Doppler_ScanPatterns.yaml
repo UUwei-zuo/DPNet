@@ -1,0 +1,18 @@
+# Written by Wei Zuo in April 2026:
+# To reduce computation in simulation, this Doppler LiDAR pattern file has been modified
+# For the default pattern file, please refer to the original carla-aeva repository:
+# https://github.com/aevainc/carla-aeva/blob/aeva-lidar-plugin/ScanPatterns.yaml
+
+num_beams: 4
+
+beam_elevation_offsets_deg: [0.5729578, -1.718873, 1.718873, -0.5729578]
+
+patterns:
+
+  24-12.7-Uniform:
+
+    horizontal_fov_deg: [-180.0, 180.0]
+    points_per_line: 1200
+
+    elevation_steps_deg: 
+      [-6.9, -4.2, -3.0, -1.8, 1.8, 2.4]

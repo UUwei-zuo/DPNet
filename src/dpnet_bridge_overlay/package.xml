@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>dpnet_bridge_overlay</name>
+  <version>0.1.0</version>
+  <description>DPNet overlay package for CARLA bridge launch/config assets.</description>
+
+  <maintainer email="zuowei@eee.hku.hk">zuo</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roslaunch</build_depend>
+
+  <exec_depend>carla_manual_control</exec_depend>
+  <exec_depend>carla_ros_bridge</exec_depend>
+  <exec_depend>carla_spawn_objects</exec_depend>
+  <exec_depend>rviz</exec_depend>
+
+  <export/>
+</package>

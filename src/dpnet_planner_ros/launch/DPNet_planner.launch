@@ -1,0 +1,12 @@
+<!-- -->
+<launch>
+    <!-- Robot ID parameter -->
+    <arg name="robot_id" default="agent_1" />
+
+    <!-- Main planner node -->
+    <node pkg="dpnet_planner_ros" name="dpnet_planner_ros1" type="DPNet_planner.py">
+        <rosparam command="load" file="$(find dpnet_planner_ros)/../../examples/DPNet_hyperparameters.yaml" />
+        <param name="robot_id" value="$(arg robot_id)" />
+    </node>
+
+</launch>

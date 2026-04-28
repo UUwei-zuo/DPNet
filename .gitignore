@@ -1,0 +1,31 @@
+.idea/
+
+# ROS / catkin build outputs
+build/
+devel/
+install/
+log/
+logs/
+.catkin_workspace
+.catkin_tools/
+src/CMakeLists.txt
+
+# Python cache and virtualenv artifacts
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Runtime outputs
+*.log
+*.bag
+*.db3
+*.pid
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
