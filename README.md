@@ -1,4 +1,6 @@
-# DPNet: Doppler LiDAR Motion Planning for Highly-Dynamic Envinronments
+
+
+# DPNet: Doppler LiDAR Motion Planning for Highly-Dynamic Environments
 
 <a href="https://arxiv.org/pdf/2512.00375"><img src='https://img.shields.io/badge/PDF-Arxiv-brightgreen' alt='PDF'></a>
 <a href="https://ieeexplore.ieee.org/abstract/document/11488574"><img src='https://img.shields.io/badge/PDF-IEEE-brightgreen' alt='PDF'></a>
@@ -10,6 +12,8 @@ This is the project page of the RA-L '26 paper:
 
 ***Authors:***  
 [Wei Zuo](https://github.com/UUwei-zuo), [Zeyi Ren](https://scholar.google.com/citations?user=bdkdiw4AAAAJ&hl=zh-CN), [Chengyang Li](https://github.com/KevinLADLee), [Yikun Wang](https://scholar.google.com/citations?user=nEgyU6MAAAAJ&hl=en&oi=sra), [Mingle Zhao](https://github.com/zha0ming1e), [Shuai Wang](https://scholar.google.com/citations?user=W7WcEW0AAAAJ&hl=zh-CN), [Wei Sui](https://scholar.google.com/citations?user=0vckuD8AAAAJ&hl=zh-CN), [Fei Gao](https://scholar.google.com/citations?hl=zh-CN&user=4RObDv0AAAAJ&view_op=list_works), [Yik-Chung Wu](https://scholar.google.com/citations?hl=en&user=pEpkokUAAAAJ&view_op=list_works), and [Chengzhong Xu](https://scholar.google.com/citations?user=XsBBTUgAAAAJ&hl=en).
+
+https://github.com/user-attachments/assets/d80881d1-aa0a-44c6-b84b-5080b59a3114
 
 ## 🚀 Update
 
@@ -28,7 +32,6 @@ allowing accurate 4D scene understanding.
 - Doppler-Tuned Model Predictive Control (DT-MPC): a runtime prediction-triggered controller tuning module.
 
 Built upon these two modules, DPNet achieves agile collision-free motion planning among fast moving obstacles, opening up new research paradigms of Doppler LiDAR guided robot motion planning.  
-
 
 ***🔥 Watch the video introduction on [YouTube](https://youtu.be/fjQ_o6b9oSg) or [bilibili](https://b23.tv/O4QgGEK):***
 
