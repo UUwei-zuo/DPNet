@@ -143,11 +143,14 @@ We sincerely appreciate your citation if you find this work useful:
 
 ```
 @article{zuo2026dpnet,
-  title={DPNet: Doppler LiDAR Motion Planning for Highly-Dynamic Environments},
   author={Zuo, Wei and Ren, Zeyi and Li, Chengyang and Wang, Yikun and Zhao, Mingle and Wang, Shuai and Sui, Wei and Gao, Fei and Wu, Yik-Chung and Xu, Chengzhong},
-  journal={IEEE Robotics and Automation Letters},
+  journal={IEEE Robotics and Automation Letters}, 
+  title={DPNet: Doppler LiDAR Motion Planning for Highly-Dynamic Environments}, 
   year={2026},
-  publisher={IEEE}
+  volume={11},
+  number={6},
+  pages={7190-7197},
+  doi={10.1109/LRA.2026.3685933}
 }
 ```
 
