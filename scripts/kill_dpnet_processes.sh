@@ -100,13 +100,6 @@ patterns=(
   "roslaunch dpnet_bridge_overlay DPNet_bridge.launch"
   "roslaunch dpnet_planner_ros DPNet_planner.launch"
   "carla_ros_bridge.*bridge.py"
-  "rosmaster --core"
-  "roscore"
-  "rosout"
-  "rviz(\\s|$)"
-  "carla_spawn_objects"
-  "carla_manual_control"
-  "rostopic echo"
 )
 
 for pattern in "${patterns[@]}"; do
