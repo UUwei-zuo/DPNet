@@ -7,3 +7,4 @@ PyYAML
 rospkg
 opencv-python
 ecos
+empy==3.3.4

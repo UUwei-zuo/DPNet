@@ -31,9 +31,13 @@ allowing accurate 4D scene understanding.
 
 - Doppler-Tuned Model Predictive Control (DT-MPC): a runtime prediction-triggered controller tuning module.
 
-Built upon these two modules, DPNet achieves agile collision-free motion planning among fast moving obstacles, opening up new research paradigms of Doppler LiDAR guided robot motion planning.  
+Built upon these two modules, DPNet achieves agile collision-free motion planning among fast moving obstacles, opening up new research paradigms of Doppler LiDAR guided robot motion planning.
 
-***🔥 Watch the video introduction on [YouTube](https://youtu.be/fjQ_o6b9oSg) or [bilibili](https://b23.tv/O4QgGEK):***
+| ![DPNet](./img/architecture.png) | 
+|:--------------------------------:| 
+|        DPNet Architecture        |
+
+### ***🔥 Watch the video introduction on [YouTube](https://youtu.be/fjQ_o6b9oSg) or [bilibili](https://b23.tv/O4QgGEK) ⬇️*** 
 
 [![Watch the video](https://img.youtube.com/vi/fjQ_o6b9oSg/maxresdefault.jpg)](https://youtu.be/fjQ_o6b9oSg)
 
@@ -84,12 +88,13 @@ conda install libffi==3.3 -y
 # API for more Python versions are provided in project release
 # If you build from source, you can install any dedicated API versions
 WHEEL_URL_39="https://github.com/UUwei-zuo/DPNet/releases/download/v1.0.0/carla-0.9.15-cp39-cp39-linux_x86_64.whl"
+WHEEL_FILE="carla-0.9.15-cp39-cp39-linux_x86_64.whl"
 wget $WHEEL_URL_39
-pip install carla-0.9.15-cp39-cp39-linux_x86_64.whl
+pip install $WHEEL_FILE && rm $WHEEL_FILE
 
 # build workspace
-catkin_make
 source /opt/ros/noetic/setup.bash
+catkin_make
 source devel/setup.bash
 
 # run DPNet example
