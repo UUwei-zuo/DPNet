@@ -1,5 +1,5 @@
-
-
+<div align="center">
+  
 # DPNet: Doppler LiDAR Motion Planning for Highly-Dynamic Environments
 
 <a href="https://arxiv.org/pdf/2512.00375"><img src='https://img.shields.io/badge/PDF-Arxiv-brightgreen' alt='PDF'></a>
@@ -7,25 +7,25 @@
 <a href="https://youtu.be/fjQ_o6b9oSg"><img src='https://img.shields.io/badge/Video-Youtube-blue' alt='youtube'></a>
 <a href="https://b23.tv/O4QgGEK"><img src='https://img.shields.io/badge/Video-Bilibili-blue' alt='youtube'></a>
 
-This is the project page of the RA-L '26 paper:  
-### DPNet: Doppler LiDAR Motion Planning for Highly-Dynamic Environments  
+**Project Page of The RA-L '26 Paper** [**DPNet**](https://arxiv.org/pdf/2512.00375).
 
-***Authors:***  
 [Wei Zuo](https://github.com/UUwei-zuo), [Zeyi Ren](https://scholar.google.com/citations?user=bdkdiw4AAAAJ&hl=zh-CN), [Chengyang Li](https://github.com/KevinLADLee), [Yikun Wang](https://scholar.google.com/citations?user=nEgyU6MAAAAJ&hl=en&oi=sra), [Mingle Zhao](https://github.com/zha0ming1e), [Shuai Wang](https://scholar.google.com/citations?user=W7WcEW0AAAAJ&hl=zh-CN), [Wei Sui](https://scholar.google.com/citations?user=0vckuD8AAAAJ&hl=zh-CN), [Fei Gao](https://scholar.google.com/citations?hl=zh-CN&user=4RObDv0AAAAJ&view_op=list_works), [Yik-Chung Wu](https://scholar.google.com/citations?hl=en&user=pEpkokUAAAAJ&view_op=list_works), and [Chengzhong Xu](https://scholar.google.com/citations?user=XsBBTUgAAAAJ&hl=en).
 
-https://github.com/user-attachments/assets/d80881d1-aa0a-44c6-b84b-5080b59a3114
+![DPNet](./img/architecture.png)
 
-## 🚀 Update
+</div>
+
+# 🚀 Update
 
 **[28-Apr-2026]** Code is released.  
 **[10-Apr-2026]** Our work is accepted to IEEE Robotics and Automation Letters (RA-L).
 
 # 📖 Introduction
 
-Doppler LiDAR is a powerful sensor that provides the 4-th measuring dimension: **Doppler velocity**.
-Apart from traditional spatial (x,y,z) measurement, Doppler velocity directly captures the instantaneous spatio-temporal knowledge for each point,
-allowing accurate 4D scene understanding.
-***Our work DPNet is the first framework to integrate Doppler LiDAR into closed-loop motion planning.*** By leveraging Doppler LiDAR, DPNet introduces:
+Doppler LiDAR is a powerful sensor that provides the **4-th measuring dimension: Doppler velocity**.
+Apart from traditional spatial (x, y, z) measurement, Doppler velocity directly captures the instantaneous spatio-temporal knowledge at per-point level,
+thus allowing direct, granular, and accurate 4D scene understanding.
+***Our work DPNet is the first framework to integrate Doppler LiDAR into closed-loop motion planning.*** By incorporating and leveraging Doppler LiDAR, DPNet introduces:
 
 - Doppler Kalman Neural Network (D-KalmanNet): a real-time obstacle motion prediction module.
 
@@ -33,13 +33,13 @@ allowing accurate 4D scene understanding.
 
 Built upon these two modules, DPNet achieves agile collision-free motion planning among fast moving obstacles, opening up new research paradigms of Doppler LiDAR guided robot motion planning.
 
-| ![DPNet](./img/architecture.png) | 
-|:--------------------------------:| 
-|        DPNet Architecture        |
-
-### ***🔥 Watch the video introduction on [YouTube](https://youtu.be/fjQ_o6b9oSg) or [bilibili](https://b23.tv/O4QgGEK) ⬇️*** 
+## 🔥 Video introduction on [YouTube](https://youtu.be/fjQ_o6b9oSg) or [bilibili](https://b23.tv/O4QgGEK) 
 
 [![Watch the video](https://img.youtube.com/vi/fjQ_o6b9oSg/maxresdefault.jpg)](https://youtu.be/fjQ_o6b9oSg)
+
+## 🏎️ Experimental demonstration on random testbed
+
+https://github.com/user-attachments/assets/d80881d1-aa0a-44c6-b84b-5080b59a3114
 
 # 🛠️ Prerequisite
 
@@ -128,13 +128,13 @@ for higher perception granularity, you could increase `elevation_steps_deg`, etc
 
 # 📋 Miscellaneous
 
-- **ROS-Bridge for Doppler LiDAR**
+### ROS-Bridge for Doppler LiDAR
 
 To connect [carla-aeva](https://github.com/aevainc/carla-aeva) with ROS,
 [ros-bridge-DopplerLiDAR](https://github.com/UUwei-zuo/ros-bridge-DopplerLiDAR) is provided. 
 It has been included in DPNet as a default submodule.
 
-- **Q & A**
+### Q & A
 
 **Q1.** Why can D-KalmanNet's step interval `dt` mismatch DPNet planner's horizon interval `sample_time` in `examples/DPNet_hyperparameters.yaml` ?  
 **A1.** D-KalmanNet predicts obstacle motions by using Doppler-perceived velocity to calculate future state transition with a dedicated motion model, e.g., `x'=x+vt+0.5*a*t^{2}` if considering constant acceleration.
@@ -143,9 +143,14 @@ As such, the actual ego control result typically mismatches the solution target.
 This means that the expected one-step ego motion does not take an exact `sample_time` to finish.
 Consequently, `dt` and `sample_time` can be tuned differently to alleviate the solution-to-control inconsistency, ensuring a better global performance.
 
+### Future Release Plan
+
+- [ ] Improved code cleanups
+- [ ] Training code for D-KalmanNet
+
 # 🙌 Citation
 
-We sincerely appreciate your citation if you find this work useful:
+We sincerely appreciate your star and citation if you find this work insightful:
 
 ```
 @article{zuo2026dpnet,
