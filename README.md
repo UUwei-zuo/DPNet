@@ -137,11 +137,9 @@ It has been included in DPNet as a default submodule.
 ### Q & A
 
 **Q1.** Why can D-KalmanNet's step interval `dt` mismatch DPNet planner's horizon interval `sample_time` in `examples/DPNet_hyperparameters.yaml` ?  
-**A1.** D-KalmanNet predicts obstacle motions by using Doppler-perceived velocity to calculate future state transition with a dedicated motion model, e.g., `x'=x+vt+0.5*a*t^{2}` if considering constant acceleration.
-However, carla uses throttle-based ego vehicle control, which cannot guarantee an instant realization of the target velocity value in planner's solution.
-As such, the actual ego control result typically mismatches the solution target.
-This means that the expected one-step ego motion does not take an exact `sample_time` to finish.
-Consequently, `dt` and `sample_time` can be tuned differently to alleviate the solution-to-control inconsistency, ensuring a better global performance.
+**A1.** D-KalmanNet predicts obstacle motions with a velocity-based motion model, e.g., `x'=x+vt+0.5*a*t^{2}` under constant acceleration.
+In contrast, carla simulation realizes vehicle motions with a throttle-based motion model.
+Consequently, adjusting dt and sample_time independently can mitigate the velocity-to-throttle inconsistency.
 
 ### Future Release Plan
 
