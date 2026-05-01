@@ -7,7 +7,7 @@
 <a href="https://youtu.be/fjQ_o6b9oSg"><img src='https://img.shields.io/badge/Video-Youtube-blue' alt='youtube'></a>
 <a href="https://b23.tv/O4QgGEK"><img src='https://img.shields.io/badge/Video-Bilibili-blue' alt='youtube'></a>
 
-**Project Page of The RA-L '26 Paper** [**DPNet**](https://arxiv.org/pdf/2512.00375)
+### Project Page of The RA-L '26 Paper [DPNet](https://arxiv.org/pdf/2512.00375)
 
 [Wei Zuo](https://github.com/UUwei-zuo), [Zeyi Ren](https://scholar.google.com/citations?user=bdkdiw4AAAAJ&hl=zh-CN), [Chengyang Li](https://github.com/KevinLADLee), [Yikun Wang](https://scholar.google.com/citations?user=nEgyU6MAAAAJ&hl=en&oi=sra), [Mingle Zhao](https://github.com/zha0ming1e), [Shuai Wang](https://scholar.google.com/citations?user=W7WcEW0AAAAJ&hl=zh-CN), [Wei Sui](https://scholar.google.com/citations?user=0vckuD8AAAAJ&hl=zh-CN), [Fei Gao](https://scholar.google.com/citations?hl=zh-CN&user=4RObDv0AAAAJ&view_op=list_works), [Yik-Chung Wu](https://scholar.google.com/citations?hl=en&user=pEpkokUAAAAJ&view_op=list_works), and [Chengzhong Xu](https://scholar.google.com/citations?user=XsBBTUgAAAAJ&hl=en)
 
@@ -18,22 +18,22 @@
 # 🚀 Update
 
 **[28-Apr-2026]** Code is released.  
-**[10-Apr-2026]** Our work is accepted to IEEE Robotics and Automation Letters (RA-L).
+**[10-Apr-2026]** Acceptance to *IEEE Robotics and Automation Letters (RA-L)*.
 
 # 📖 Introduction
 
 Doppler LiDAR is a powerful sensor that provides the **4-th measuring dimension: Doppler velocity**.
 Apart from traditional spatial (x, y, z) measurement, Doppler velocity directly captures the instantaneous spatio-temporal knowledge at per-point level,
 thus allowing direct, granular, and accurate 4D scene understanding.
-***Our work DPNet is the first framework to integrate Doppler LiDAR into closed-loop motion planning.*** By incorporating and leveraging Doppler LiDAR, DPNet introduces:
+***DPNet is the first framework to integrate Doppler LiDAR into closed-loop motion planning.*** By incorporating and leveraging Doppler LiDAR, DPNet introduces:
 
 - Doppler Kalman Neural Network (D-KalmanNet): a real-time obstacle motion prediction module.
 
 - Doppler-Tuned Model Predictive Control (DT-MPC): a runtime prediction-triggered controller tuning module.
 
-Built upon these two modules, DPNet achieves agile collision-free motion planning among fast moving obstacles, opening up new research paradigms of Doppler LiDAR guided robot motion planning.
+Built upon these two modules, DPNet achieves agile collision-free motion planning among fast moving obstacles, opening up new research paradigms of Doppler LiDAR guided robot motion planning and autonomous driving.
 
-## 🔥 Video introduction on [YouTube](https://youtu.be/fjQ_o6b9oSg) or [bilibili](https://b23.tv/O4QgGEK) 
+## 🔥 Video intro available on [YouTube](https://youtu.be/fjQ_o6b9oSg) or [bilibili](https://b23.tv/O4QgGEK) 
 
 [![Watch the video](https://img.youtube.com/vi/fjQ_o6b9oSg/maxresdefault.jpg)](https://youtu.be/fjQ_o6b9oSg)
 
@@ -71,7 +71,7 @@ In Step 2, if you choose
 cd path_to_carla_aeva_on_your_computer
 ./CarlaUE4.sh
 ```
-- Then, to run DPNet:
+- Then, run DPNet in a new terminal:
 
 ```bash
 # clone DPNet with ros-bridge-DopplerLiDAR submodule
@@ -86,7 +86,7 @@ pip install -r requirements.txt
 conda install libffi==3.3 -y
 
 # API for more Python versions are provided in project release
-# If you build from source, you can install any dedicated API versions
+# If you build from source, you can install any dedicated API version
 WHEEL_URL_39="https://github.com/UUwei-zuo/DPNet/releases/download/v1.0.0/carla-0.9.15-cp39-cp39-linux_x86_64.whl"
 WHEEL_FILE="carla-0.9.15-cp39-cp39-linux_x86_64.whl"
 wget $WHEEL_URL_39
@@ -136,10 +136,10 @@ It has been included in DPNet as a default submodule.
 
 ### Q & A
 
-**Q1.** Why can D-KalmanNet's step interval `dt` mismatch DPNet planner's horizon interval `sample_time` in `examples/DPNet_hyperparameters.yaml` ?  
-**A1.** D-KalmanNet predicts obstacle motions with a velocity-based motion model, e.g., `x'=x+vt+0.5*a*t^{2}` under constant acceleration.
+- Q1. Why can D-KalmanNet's step interval `dt` mismatch DPNet planner's horizon interval `sample_time` in `examples/DPNet_hyperparameters.yaml` ?  
+A1. D-KalmanNet predicts obstacle motions with a velocity-based motion model, e.g., `x'=x+vt+0.5*a*t^{2}` under constant acceleration.
 In contrast, carla simulation realizes vehicle motions with a throttle-based motion model.
-Consequently, adjusting dt and sample_time independently can mitigate the velocity-to-throttle inconsistency.
+Consequently, adjusting `dt` and `sample_time` independently can mitigate the velocity-to-throttle inconsistency.
 
 ### Future Release Plan
 
@@ -167,6 +167,6 @@ We sincerely appreciate your star and citation if you find this work insightful:
 
 Contact [Wei Zuo](https://github.com/UUwei-zuo) by zuowei@eee.hku.hk if you have any questions or suggestions.
 
-## 📇 License
+# 📇 License
 This repository is released under the MIT license. See [LICENSE](./LICENSE) for additional details.
 
